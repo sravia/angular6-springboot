@@ -1,0 +1,9 @@
+﻿<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>Demo for NEO</h1>
+        <p>Provide your phone number starting with country code. Example +371 28877722</p>
+        <input *ngIf="countries.length > 0" type="text" placeholder="Enter your phone number" [(ngModel)]="phoneNumber" (input)="filter()">
+        <span style="color:red; display:block;" *ngIf="error">{{error}}</span>
+        <span style="color:green; display:block;" *ngIf="country">Phone number country: {{country}}</span>
+    </div>
+</div>
